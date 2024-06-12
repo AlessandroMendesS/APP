@@ -32,7 +32,7 @@ app.geometry("1280x1000")
 app.title('Login')
 app.resizable(False, False)
 
-img1 = ImageTk.PhotoImage(Image.open("refu.jpg"))
+img1 = ImageTk.PhotoImage(Image.open("aviaoo.jpg"))
 Plano1 = customtkinter.CTkLabel(master=app, image=img1)
 Plano1.pack()
 
