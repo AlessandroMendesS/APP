@@ -11,7 +11,7 @@ O principal problema que ele resolve e a descrição de como deveria funcionar: 
 02. Visualizar informações do país: Após a pesquisa, o aplicativo deve exibir informações como IDH, PIB, moeda do país, descrição do país, custo médio de passagens e outras informações relevantes.
 03. Favoritar países: Os usuários devem poder favoritar países para acessá-los facilmente mais tarde.
 ### Protótipos:
-Estes protótipos a seguir são antes das mais recentes atualizações do projeto, assim sendo, apenas um rascunho/ideia que tinhamos para o aplicativoㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+Estes protótipos a seguir são antes das mais recentes atualizações do projeto, assim sendo, apenas um rascunho/ideia que tinhamos para o aplicativo (Todos os protótipos foram feitos no bloco de notas e também diretamente do Pyhton)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
 ![image](https://github.com/AlessandroMendesS/APP/assets/165946341/0d32316a-920d-48ba-b180-54dfe1f1389b)
 ![image](https://github.com/AlessandroMendesS/APP/assets/165946341/c78756a9-8d04-4d4b-b2a7-2bc8833f9b2b)ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ(Todos os protótipos foram feitos no bloco de notas e também diretamente do Pyhton)
 # Fluxograma: 
