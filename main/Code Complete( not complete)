@@ -11,7 +11,8 @@ usuarios = {
     "LucianoTrevisan": "Posturado",
     "Alessandro": "Sigma",
     "HenriqueAlpha":"Alpha",
-    "Jao":"Trembo"
+    "Jao":"Trembo",
+    "1":"1"
 }
 
 def botao_login():
