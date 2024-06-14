@@ -1,10 +1,16 @@
 import tkinter
 import customtkinter
 from PIL import ImageTk, Image
+import webbrowser
 
 
 customtkinter.set_default_color_theme("green")
 customtkinter.set_appearance_mode("ligth")
+
+def google():
+    webbrowser.open("https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AS5LTARQc9jS-cCamm6aFQmtQCiZg6WjMm8MUgF92hn8EwIJM0-duxZk6BKtuhAI8QddQrzoiVcYCg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1106715380%3A1718385666911989&ddm=0")
+def facebook():
+    webbrowser.open("https://pt-br.facebook.com/login/device-based/regular/login/")
 
 #Somente adms tem acesso ...
 usuarios = {
@@ -415,6 +421,8 @@ def botao_login():
             Botao_Coracao_Espanha.place(x=325, y=635)
             Botao_Coracao_Espanha.configure(command=favoritar_espanha)
 
+            
+
 
             Favoritos.mainloop()
 
@@ -653,12 +661,14 @@ img3 = customtkinter.CTkImage(Image.open("google.jpg").resize((20, 20)))
 
 google = customtkinter.CTkButton(master=Caixa, image=img3, text="Google", width=100, height=20, corner_radius=6, compound="left", text_color="black",
                             fg_color="white",
-                            hover_color="#AAAAAA")
+                            hover_color="#AAAAAA",
+                            command=google)
 google.place(x=50, y=320)
 
 facebook = customtkinter.CTkButton(master=Caixa, image=img2, text="Facebook", width=100, height=20, corner_radius=6, compound="left", text_color="black",
                                 fg_color="white",
-                                hover_color="#AAAAAA")
+                                hover_color="#AAAAAA",
+                                command=facebook)
 facebook.place(x=170, y=320)
 
 
@@ -670,13 +680,13 @@ CaixaQR.place(relx=0.95, rely=0.95, anchor=tkinter.SE)
 QRCode = customtkinter.CTkLabel(master=CaixaQR, image=img4, text="")
 QRCode.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-imgLogo = ImageTk.PhotoImage(Image.open("LOGO.png").resize((200, 200)))
+# imgLogo = ImageTk.PhotoImage(Image.open("LOGO.png").resize((200, 200)))
 
-CaixaLogo = customtkinter.CTkFrame(master=app, width=500, height=220, corner_radius=10, fg_color="transparent")
-CaixaLogo.place(x=720, y=50)
+# CaixaLogo = customtkinter.CTkFrame(master=app, width=500, height=220, corner_radius=10, fg_color="transparent")
+# CaixaLogo.place(x=720, y=50)
 
-Logo = customtkinter.CTkLabel(master=CaixaLogo, image=imgLogo, text="")
-Logo.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+# Logo = customtkinter.CTkLabel(master=CaixaLogo, image=imgLogo, text="")
+# Logo.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
 
 app.mainloop()
