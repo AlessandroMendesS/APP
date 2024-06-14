@@ -16,3 +16,4 @@ Estes protótipos a seguir são antes das mais recentes atualizações do projet
 # Fluxograma: 
 https://app.diagrams.net/#G1jApOKUy6_TN1zTTpVZcHGWJ8y6McpV_9#%7B%22pageId%22%3A%22oMlwRrjJkWFmrOkWhqLc%22%7D
 
+![image](https://github.com/AlessandroMendesS/APP/assets/165946341/391c2d60-f1f2-4be0-8793-7eb03cac5ba9)
