@@ -37,13 +37,13 @@ def botao_login():
 
 
 
-            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20), text_color="black")
             Plano2.place(x=170, y=45)
 
             search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
             search.place(x=25,y=100)
 
-            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20), text_color="black")
             categorias.place(x=170,y=165)
 
 
@@ -58,7 +58,7 @@ def botao_login():
             botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
             botao3.place(x=305,y=210)
 
-            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35), text_color="black")
             país.place(x=195,y=280)
 
             setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
@@ -125,13 +125,13 @@ def botao_login():
 
 
 
-            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20), text_color="black")
             Plano2.place(x=170, y=45)
 
             search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
             search.place(x=25,y=100)
 
-            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20), text_color="black")
             categorias.place(x=170,y=165)
 
 
@@ -146,7 +146,7 @@ def botao_login():
             botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
             botao3.place(x=305,y=210)
 
-            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35), text_color="black")
             país.place(x=195,y=280)
 
             setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
@@ -315,11 +315,11 @@ def botao_login():
             Caixa_Alemanha = customtkinter.CTkLabel(master=Pais, image=Imagem_Alemanha, width=100, height=100, text="")
             Caixa_Alemanha.place(x=-10,y=0)
 
-            descricao_pais = customtkinter.CTkLabel(master=Caixa, text="Com uma história rica e uma cultura vibrante,")
+            descricao_pais = customtkinter.CTkLabel(master=Caixa, text="Com uma história rica e uma cultura vibrante,", text_color="black")
             descricao_pais.place(x=140,y=40)
-            descricao_pais2 = customtkinter.CTkLabel(master=Caixa, text="a Alemanha é um destino fascinante que desperta")
+            descricao_pais2 = customtkinter.CTkLabel(master=Caixa, text="a Alemanha é um destino fascinante que desperta", text_color="black")
             descricao_pais2.place(x=140,y=60)
-            descricao_pais3 = customtkinter.CTkLabel(master=Caixa, text="o interesse e o desejo de explorá-la.")
+            descricao_pais3 = customtkinter.CTkLabel(master=Caixa, text="o interesse e o desejo de explorá-la.", text_color="black")
             descricao_pais3.place(x=140,y=80)
 
             Coracao = Image.open("coracao.png")
@@ -343,11 +343,11 @@ def botao_login():
             Caixa_Brasil = customtkinter.CTkLabel(master=Pais_Brasil, image=Imagem_Brasil, width=100, height=100, text="")
             Caixa_Brasil.place(relx=0, rely=0, anchor=tkinter.NW)
 
-            descricao_pais_brasil = customtkinter.CTkLabel(master=Caixa, text="Com uma rica diversidade cultural e natural,")
+            descricao_pais_brasil = customtkinter.CTkLabel(master=Caixa, text="Com uma rica diversidade cultural e natural,", text_color="black")
             descricao_pais_brasil.place(x=140,y=230)
-            descricao_pais_brasil2 = customtkinter.CTkLabel(master=Caixa, text="o Brasil é um destino atraente que oferece")
+            descricao_pais_brasil2 = customtkinter.CTkLabel(master=Caixa, text="o Brasil é um destino atraente que oferece", text_color="black")
             descricao_pais_brasil2.place(x=140,y=250)
-            descricao_pais_brasil3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.")
+            descricao_pais_brasil3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.", text_color="black")
             descricao_pais_brasil3.place(x=140,y=270)
 
             Coracao_Brasil = Image.open("coracao.png")
@@ -371,11 +371,11 @@ def botao_login():
             Caixa_Francia = customtkinter.CTkLabel(master=Pais_Francia, image=Imagem_Francia, width=100, height=100, text="")
             Caixa_Francia.place(relx=0, rely=0, anchor=tkinter.NW)
 
-            descricao_pais_francia = customtkinter.CTkLabel(master=Caixa, text="Conhecida por sua rica história e cultura,")
+            descricao_pais_francia = customtkinter.CTkLabel(master=Caixa, text="Conhecida por sua rica história e cultura,", text_color="black")
             descricao_pais_francia.place(x=140,y=390)
-            descricao_pais_francia2 = customtkinter.CTkLabel(master=Caixa, text="a França é um destino romântico e atraente.")
+            descricao_pais_francia2 = customtkinter.CTkLabel(master=Caixa, text="a França é um destino romântico e atraente.", text_color="black")
             descricao_pais_francia2.place(x=140,y=410)
-            descricao_pais_francia3 = customtkinter.CTkLabel(master=Caixa, text="Desfrute da beleza de Paris e do campo francês.")
+            descricao_pais_francia3 = customtkinter.CTkLabel(master=Caixa, text="Desfrute da beleza de Paris e do campo francês.", text_color="black")
             descricao_pais_francia3.place(x=140,y=430)
 
             Coracao_Francia = Image.open("coracao.png")
@@ -400,11 +400,11 @@ def botao_login():
             Caixa_Espanha = customtkinter.CTkLabel(master=Pais_Espanha, image=Imagem_Espanha, width=100, height=100, text="")
             Caixa_Espanha.place(relx=0, rely=0, anchor=tkinter.NW)
 
-            descricao_pais_espanha = customtkinter.CTkLabel(master=Caixa, text="Com uma rica história e uma cultura vibrante,")
+            descricao_pais_espanha = customtkinter.CTkLabel(master=Caixa, text="Com uma rica história e uma cultura vibrante,", text_color="black")
             descricao_pais_espanha.place(x=140,y=570)
-            descricao_pais_espanha2 = customtkinter.CTkLabel(master=Caixa, text="a Espanha é um destino atraente que oferece")
+            descricao_pais_espanha2 = customtkinter.CTkLabel(master=Caixa, text="a Espanha é um destino atraente que oferece", text_color="black")
             descricao_pais_espanha2.place(x=140,y=590)
-            descricao_pais_espanha3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.")
+            descricao_pais_espanha3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.", text_color="black")
             descricao_pais_espanha3.place(x=140,y=610)
 
             Coracao_Espanha = Image.open("coracao.png")
@@ -414,6 +414,7 @@ def botao_login():
             Botao_Coracao_Espanha = customtkinter.CTkButton(master=Caixa, image=Coracao_Espanha, width=30, height=30, corner_radius=15, fg_color="white", hover_color="white", text="Favoritar", text_color="black")
             Botao_Coracao_Espanha.place(x=325, y=635)
             Botao_Coracao_Espanha.configure(command=favoritar_espanha)
+
 
             Favoritos.mainloop()
 
@@ -433,13 +434,13 @@ def botao_login():
 
 
 
-        Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+        Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20), text_color="black")
         Plano2.place(x=170, y=45)
 
         search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
         search.place(x=25,y=100)
 
-        categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+        categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20), text_color="black")
         categorias.place(x=170,y=165)
 
 
@@ -454,7 +455,7 @@ def botao_login():
         botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
         botao3.place(x=305,y=210)
 
-        país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+        país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35), text_color="black")
         país.place(x=195,y=280)
 
         setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
