@@ -1,0 +1,564 @@
+import tkinter
+import customtkinter
+from PIL import ImageTk, Image
+
+
+customtkinter.set_default_color_theme("green")
+
+#Somente adms tem acesso ...
+usuarios = {
+    "LucianoTrevisan": "Posturado",
+    "Alessandro": "Sigma",
+    "HenrigueAlpha":"Alpha",
+    "JoaoBobao":"betaaaa"
+}
+
+def botao_login():
+    email_input = email.get()
+    senha_input = senha.get()
+    
+    if email_input in usuarios and usuarios[email_input] == senha_input:
+        app.destroy()
+        customtkinter.set_appearance_mode("ligth")
+
+        def setadireita():
+            main.destroy()
+            Main2 = customtkinter.CTk()
+            Main2.geometry("500x800")
+            Main2.title("Página Principal")
+
+            Caixa = customtkinter.CTkFrame(master=Main2, width=450, height=900, corner_radius=50, fg_color="white")
+            Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+            Caixa2 = customtkinter.CTkFrame(master=Caixa, width=300, height=450, fg_color="White", corner_radius=15)
+            Caixa2.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+            Caixa2.place(x=0, y=60)
+
+
+
+            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+            Plano2.place(x=170, y=45)
+
+            search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
+            search.place(x=25,y=100)
+
+            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+            categorias.place(x=170,y=165)
+
+
+            botao1 = customtkinter.CTkButton(master=Caixa, text='Europa', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao1.place(x=35,y=210)
+
+
+            botao2 = customtkinter.CTkButton(master=Caixa, text='África', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao2.place(x=170,y=210)
+
+
+            botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao3.place(x=305,y=210)
+
+            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+            país.place(x=195,y=280)
+
+            setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
+
+            botao4 = customtkinter.CTkButton(master=Caixa, image=setaD, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                        fg_color="#EFB810",
+                                        hover_color="#AAAAAA")
+            botao4.place(x=370, y=500)
+
+
+            setaE = customtkinter.CTkImage(Image.open("seta-esquerda.png").resize((20, 20)))
+
+            botao5 = customtkinter.CTkButton(master=Caixa, image=setaE, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                        fg_color="#EFB810",
+                                        hover_color="#AAAAAA")
+            botao5.place(x=20, y=500)
+
+
+            img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
+
+            Home = customtkinter.CTkButton(master=Caixa, image=img2, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB")
+            Home.place(x=75, y=825)
+
+            img3 = customtkinter.CTkImage(Image.open("opcoes-removebg-preview.png").resize((20, 20)))
+
+            Opcoes = customtkinter.CTkButton(master=Caixa, image=img3, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB"
+                                            
+                                        )
+            Opcoes.place(x=325, y=825)
+
+            img4 = customtkinter.CTkImage(Image.open("Cora.png").resize((20, 20)))
+
+            Favoritos = customtkinter.CTkButton(master=Caixa, image=img4, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB")
+            Favoritos.place(x=200, y=825)
+
+            image_germany = Image.open("franca.png").resize((300,300))
+            photo_germany = ImageTk.PhotoImage(image_germany)
+
+            label_germany = customtkinter.CTkLabel(master=Caixa2, image=photo_germany, width=300, height=300, text="")
+            label_germany.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+
+            Main2.mainloop()
+
+
+        def setaesquerda():
+            main.destroy()
+            Main3 = customtkinter.CTk()
+            Main3.geometry("500x800")
+            Main3.title("Página Principal")
+
+            Caixa = customtkinter.CTkFrame(master=Main3, width=450, height=900, corner_radius=50, fg_color="white")
+            Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+            Caixa2 = customtkinter.CTkFrame(master=Caixa, width=300, height=450, fg_color="White", corner_radius=15)
+            Caixa2.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+            Caixa2.place(x=0, y=60)
+
+
+
+            Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+            Plano2.place(x=170, y=45)
+
+            search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
+            search.place(x=25,y=100)
+
+            categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+            categorias.place(x=170,y=165)
+
+
+            botao1 = customtkinter.CTkButton(master=Caixa, text='Europa', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao1.place(x=35,y=210)
+
+
+            botao2 = customtkinter.CTkButton(master=Caixa, text='África', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao2.place(x=170,y=210)
+
+
+            botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+            botao3.place(x=305,y=210)
+
+            país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+            país.place(x=195,y=280)
+
+            setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
+
+            botao4 = customtkinter.CTkButton(master=Caixa, image=setaD, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                        fg_color="#EFB810",
+                                        hover_color="#AAAAAA")
+            botao4.place(x=370, y=500)
+
+
+            setaE = customtkinter.CTkImage(Image.open("seta-esquerda.png").resize((20, 20)))
+
+            botao5 = customtkinter.CTkButton(master=Caixa, image=setaE, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                        fg_color="#EFB810",
+                                        hover_color="#AAAAAA")
+            botao5.place(x=20, y=500)
+
+
+
+
+
+            img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
+
+            Home = customtkinter.CTkButton(master=Caixa, image=img2, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB")
+            Home.place(x=75, y=825)
+
+            img3 = customtkinter.CTkImage(Image.open("opcoes-removebg-preview.png").resize((20, 20)))
+
+            Opcoes = customtkinter.CTkButton(master=Caixa, image=img3, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB"
+                                            
+                                        )
+            Opcoes.place(x=325, y=825)
+
+            img4 = customtkinter.CTkImage(Image.open("Cora.png").resize((20, 20)))
+
+            Favoritos = customtkinter.CTkButton(master=Caixa, image=img4, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                            fg_color="transparent",
+                                            hover_color="#CDCDCB")
+            Favoritos.place(x=200, y=825)
+
+            image_germany = Image.open("brasil.png").resize((300,300))
+            photo_germany = ImageTk.PhotoImage(image_germany)
+
+            label_germany = customtkinter.CTkLabel(master=Caixa2, image=photo_germany, width=300, height=300, text="")
+            label_germany.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+
+            Main3.mainloop()
+
+
+
+        def opcoes():
+            main.destroy()
+            Perfil = customtkinter.CTk()
+            Perfil.geometry("500x800")
+            Perfil.title("Perfil")
+
+
+
+            localidades = ["São Paulo","Rio de Janeiro","Espírito Santo","Minas Gerais","Paraná","Santa Catarina","Rio Grande do Sul","Bahia","Sergipe","Alagoas","Pernambuco","Paraíba","Rio Grande do Norte","Ceará","Piaui","Maranhão","Tocantins","Goiás","Mato Grosso do Sul","Mato Grosso" ]
+
+            Caixa = customtkinter.CTkFrame(master=Perfil, width=450, height=900, corner_radius=50, fg_color="white")
+            Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+
+
+            imagem_perfil = Image.open("perfil-de-usuario.png").resize((150, 150))
+            imagem_perfil = ImageTk.PhotoImage(imagem_perfil)
+
+
+            imagem_perfil = customtkinter.CTkLabel(master=Caixa, image=imagem_perfil,text="", width=150, height=150, corner_radius=75, fg_color="transparent")
+            imagem_perfil.place(relx=0.5, rely=0.1, anchor=tkinter.CENTER)
+            imagem_perfil.place(x=0, y=50)
+
+
+            Nome = customtkinter.CTkLabel(master=Caixa, text="Nome:", text_color="black", font=("Century Gothic", 16))
+            Nome.place(relx=0.1, rely=0.4, anchor=tkinter.W)
+
+            Email = customtkinter.CTkLabel(master=Caixa, text="Email:", text_color="black", font=("Century Gothic", 16))
+            Email.place(relx=0.1, rely=0.51, anchor=tkinter.W)
+
+            Email_Nome = customtkinter.CTkEntry(master=Caixa, placeholder_text="Digite seu email", text_color="black", width=350, height=35, corner_radius=10)
+            Email_Nome.place(relx=0.1, rely=0.55, anchor=tkinter.W)
+
+            Localidadenome = customtkinter.CTkLabel(master=Caixa, text="Localização:", text_color="black", font=("Century Gothic", 16))
+            Localidadenome.place(x=50, y=535)
+
+            Entrada_Nome = customtkinter.CTkEntry(master=Caixa, placeholder_text="Digite seu nome", width=350, height=35, corner_radius=10)
+            Entrada_Nome.place(relx=0.1, rely=0.45, anchor=tkinter.W)
+
+            Localidade = customtkinter.CTkComboBox(master=Caixa, values=localidades, width=350, height=35, corner_radius=10)
+            Localidade.place(relx=0.1, rely=0.65, anchor=tkinter.W)
+            Localidade.set("Selecione uma localidade")
+
+            Risco = customtkinter.CTkFrame(master=Perfil, width=15, height=875, fg_color="#EFB810", bg_color="transparent")
+            Risco.place(x=745,y=70)
+
+            img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
+            Home = customtkinter.CTkButton(master=Caixa, image=img2, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                fg_color="transparent",
+                                                hover_color="#CDCDCB")
+            Home.place(x=75, y=825)
+
+            img3 = customtkinter.CTkImage(Image.open("opcoes-removebg-preview.png").resize((20, 20)))
+            Opcoes = customtkinter.CTkButton(master=Caixa, image=img3, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                fg_color="transparent",
+                                                hover_color="#CDCDCB")
+            Opcoes.place(x=325, y=825)
+
+            img4 = customtkinter.CTkImage(Image.open("Cora.png").resize((20, 20)))
+            Favoritos = customtkinter.CTkButton(master=Caixa, image=img4, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                fg_color="transparent",
+                                                hover_color="#CDCDCB")
+            Favoritos.place(x=200, y=825)
+
+
+            Perfil.mainloop()
+
+        def favoritos():
+            main.destroy()
+            Favoritos = customtkinter.CTk()
+            Favoritos.geometry("900x900")
+            Favoritos.title("Favoritos")
+
+
+            def favoritar():
+                coracao_image_favoritado = Image.open("Cora.png")
+                coracao_image_favoritado = coracao_image_favoritado.resize((30, 30))
+                coracao_image_favoritado = ImageTk.PhotoImage(coracao_image_favoritado)
+                Botao_Coracao.configure(image=coracao_image_favoritado)
+
+            def favoritar_brasil():
+                coracao_image_favoritado = Image.open("Cora.png")
+                coracao_image_favoritado = coracao_image_favoritado.resize((30, 30))
+                coracao_image_favoritado = ImageTk.PhotoImage(coracao_image_favoritado)
+                Botao_Coracao_Brasil.configure(image=coracao_image_favoritado)
+
+            def favoritar_francia():
+                coracao_image_favoritado = Image.open("Cora.png")
+                coracao_image_favoritado = coracao_image_favoritado.resize((30, 30))
+                coracao_image_favoritado = ImageTk.PhotoImage(coracao_image_favoritado)
+                Botao_Coracao_Francia.configure(image=coracao_image_favoritado)
+
+            def favoritar_espanha():
+                coracao_image_favoritado = Image.open("Cora.png")
+                coracao_image_favoritado = coracao_image_favoritado.resize((30, 30))
+                coracao_image_favoritado = ImageTk.PhotoImage(coracao_image_favoritado)
+                Botao_Coracao_Espanha.configure(image=coracao_image_favoritado)
+
+
+
+            Caixa = customtkinter.CTkFrame(master=Favoritos, width=450, height=900, corner_radius=50, fg_color="white")
+            Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+            Pais = customtkinter.CTkFrame(master=Caixa, width=250, height=250, corner_radius=10, fg_color="white")
+            Pais.place(x=35, y=40)
+
+            Imagem_Alemanha = Image.open("alemanha.webp")
+            Imagem_Alemanha = Imagem_Alemanha.resize((100, 100))
+            Imagem_Alemanha = ImageTk.PhotoImage(Imagem_Alemanha)
+
+            Caixa_Alemanha = customtkinter.CTkLabel(master=Pais, image=Imagem_Alemanha, width=100, height=100, text="")
+            Caixa_Alemanha.place(x=-10,y=0)
+
+            descricao_pais = customtkinter.CTkLabel(master=Caixa, text="Com uma história rica e uma cultura vibrante,")
+            descricao_pais.place(x=140,y=40)
+            descricao_pais2 = customtkinter.CTkLabel(master=Caixa, text="a Alemanha é um destino fascinante que desperta")
+            descricao_pais2.place(x=140,y=60)
+            descricao_pais3 = customtkinter.CTkLabel(master=Caixa, text="o interesse e o desejo de explorá-la.")
+            descricao_pais3.place(x=140,y=80)
+
+            Coracao = Image.open("coracao.png")
+            Coracao = Coracao.resize((30, 30))
+            Coracao = ImageTk.PhotoImage(Coracao)
+
+            Botao_Coracao = customtkinter.CTkButton(master=Caixa, image=Coracao, width=30, height=30, corner_radius=15, fg_color="white", hover_color="white", text="Favoritar", text_color="black")
+            Botao_Coracao.place(x=325, y=115)
+            Botao_Coracao.configure(command=favoritar)
+
+            Separacao = customtkinter.CTkFrame(master=Caixa, width=450, height=15, fg_color="#EFB810")
+            Separacao.place(x=0,y=175)
+
+            Pais_Brasil = customtkinter.CTkFrame(master=Caixa, width=250, height=250, corner_radius=10, fg_color="white")
+            Pais_Brasil.place(x=35, y=215)
+
+            Imagem_Brasil = Image.open("Brasil.jpg")
+            Imagem_Brasil = Imagem_Brasil.resize((100, 100))
+            Imagem_Brasil = ImageTk.PhotoImage(Imagem_Brasil)
+
+            Caixa_Brasil = customtkinter.CTkLabel(master=Pais_Brasil, image=Imagem_Brasil, width=100, height=100, text="")
+            Caixa_Brasil.place(relx=0, rely=0, anchor=tkinter.NW)
+
+            descricao_pais_brasil = customtkinter.CTkLabel(master=Caixa, text="Com uma rica diversidade cultural e natural,")
+            descricao_pais_brasil.place(x=140,y=230)
+            descricao_pais_brasil2 = customtkinter.CTkLabel(master=Caixa, text="o Brasil é um destino atraente que oferece")
+            descricao_pais_brasil2.place(x=140,y=250)
+            descricao_pais_brasil3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.")
+            descricao_pais_brasil3.place(x=140,y=270)
+
+            Coracao_Brasil = Image.open("coracao.png")
+            Coracao_Brasil = Coracao_Brasil.resize((30, 30))
+            Coracao_Brasil = ImageTk.PhotoImage(Coracao_Brasil)
+
+            Botao_Coracao_Brasil = customtkinter.CTkButton(master=Caixa, image=Coracao_Brasil, width=30, height=30, corner_radius=15, fg_color="white", hover_color="white", text="Favoritar", text_color="black")
+            Botao_Coracao_Brasil.place(x=325, y=300)
+            Botao_Coracao_Brasil.configure(command=favoritar_brasil)
+
+            Separacao1 = customtkinter.CTkFrame(master=Caixa, width=450, height=15, fg_color="#EFB810")
+            Separacao1.place(x=0,y=350)
+
+            Pais_Francia = customtkinter.CTkFrame(master=Caixa, width=250, height=250, corner_radius=10, fg_color="white")
+            Pais_Francia.place(x=35, y=390)
+
+            Imagem_Francia = Image.open("franca.webp")
+            Imagem_Francia = Imagem_Francia.resize((100, 100))
+            Imagem_Francia = ImageTk.PhotoImage(Imagem_Francia)
+
+            Caixa_Francia = customtkinter.CTkLabel(master=Pais_Francia, image=Imagem_Francia, width=100, height=100, text="")
+            Caixa_Francia.place(relx=0, rely=0, anchor=tkinter.NW)
+
+            descricao_pais_francia = customtkinter.CTkLabel(master=Caixa, text="Conhecida por sua rica história e cultura,")
+            descricao_pais_francia.place(x=140,y=390)
+            descricao_pais_francia2 = customtkinter.CTkLabel(master=Caixa, text="a França é um destino romântico e atraente.")
+            descricao_pais_francia2.place(x=140,y=410)
+            descricao_pais_francia3 = customtkinter.CTkLabel(master=Caixa, text="Desfrute da beleza de Paris e do campo francês.")
+            descricao_pais_francia3.place(x=140,y=430)
+
+            Coracao_Francia = Image.open("coracao.png")
+            Coracao_Francia = Coracao_Francia.resize((30, 30))
+            Coracao_Francia = ImageTk.PhotoImage(Coracao_Francia)
+
+            Botao_Coracao_Francia = customtkinter.CTkButton(master=Caixa, image=Coracao_Francia, width=30, height=30, corner_radius=15, fg_color="white", hover_color="white", text="Favoritar", text_color="black")
+            Botao_Coracao_Francia.place(x=325, y=460)
+            Botao_Coracao_Francia.configure(command=favoritar_francia)
+
+            Separacao2 = customtkinter.CTkFrame(master=Caixa, width=450, height=15, fg_color="#EFB810")
+            Separacao2.place(x=0,y=530)
+
+
+            Pais_Espanha = customtkinter.CTkFrame(master=Caixa, width=250, height=250, corner_radius=10, fg_color="white")
+            Pais_Espanha.place(x=35, y=570)
+
+            Imagem_Espanha = Image.open("espanha.webp")
+            Imagem_Espanha = Imagem_Espanha.resize((100, 100))
+            Imagem_Espanha = ImageTk.PhotoImage(Imagem_Espanha)
+
+            Caixa_Espanha = customtkinter.CTkLabel(master=Pais_Espanha, image=Imagem_Espanha, width=100, height=100, text="")
+            Caixa_Espanha.place(relx=0, rely=0, anchor=tkinter.NW)
+
+            descricao_pais_espanha = customtkinter.CTkLabel(master=Caixa, text="Com uma rica história e uma cultura vibrante,")
+            descricao_pais_espanha.place(x=140,y=570)
+            descricao_pais_espanha2 = customtkinter.CTkLabel(master=Caixa, text="a Espanha é um destino atraente que oferece")
+            descricao_pais_espanha2.place(x=140,y=590)
+            descricao_pais_espanha3 = customtkinter.CTkLabel(master=Caixa, text="muitas oportunidades de exploração.")
+            descricao_pais_espanha3.place(x=140,y=610)
+
+            Coracao_Espanha = Image.open("coracao.png")
+            Coracao_Espanha = Coracao_Espanha.resize((30, 30))
+            Coracao_Espanha = ImageTk.PhotoImage(Coracao_Espanha)
+
+            Botao_Coracao_Espanha = customtkinter.CTkButton(master=Caixa, image=Coracao_Espanha, width=30, height=30, corner_radius=15, fg_color="white", hover_color="white", text="Favoritar", text_color="black")
+            Botao_Coracao_Espanha.place(x=325, y=635)
+            Botao_Coracao_Espanha.configure(command=favoritar_espanha)
+
+            Favoritos.mainloop()
+
+
+
+
+        main = customtkinter.CTk()
+        main.geometry("500x800")
+        main.title("Página Principal")
+
+        Caixa = customtkinter.CTkFrame(master=main, width=450, height=900, corner_radius=50, fg_color="white")
+        Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+        Caixa2 = customtkinter.CTkFrame(master=Caixa, width=300, height=450, fg_color="White", corner_radius=15)
+        Caixa2.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+        Caixa2.place(x=0, y=60)
+
+
+
+        Plano2 = customtkinter.CTkLabel(master=Caixa, text="Travel-Hub", font=("Century Gothic", 20))
+        Plano2.place(x=170, y=45)
+
+        search = customtkinter.CTkEntry(master=Caixa, placeholder_text='Search', text_color='#b5b5b5', font=('', 18),width=400, height=50, corner_radius=40)
+        search.place(x=25,y=100)
+
+        categorias = customtkinter.CTkLabel(master=Caixa, text= 'Continentes', font=('Century Gothic', 20))
+        categorias.place(x=170,y=165)
+
+
+        botao1 = customtkinter.CTkButton(master=Caixa, text='Europa', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+        botao1.place(x=35,y=210)
+
+
+        botao2 = customtkinter.CTkButton(master=Caixa, text='África', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+        botao2.place(x=170,y=210)
+
+
+        botao3 = customtkinter.CTkButton(master=Caixa, text='Ásia', corner_radius=50, fg_color='#EFB810', width=115, height=30, text_color='black', hover_color='#a87b05')
+        botao3.place(x=305,y=210)
+
+        país = customtkinter.CTkLabel(master=Caixa, text= 'País', font=('Century Gothic', 35))
+        país.place(x=195,y=280)
+
+        setaD = customtkinter.CTkImage(Image.open("seta-direita.png").resize((20, 20)))
+
+        botao4 = customtkinter.CTkButton(master=Caixa, image=setaD, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                    fg_color="#EFB810",
+                                    hover_color="#AAAAAA",
+                                    command=setadireita
+                                    )
+        botao4.place(x=370, y=500)
+
+
+        setaE = customtkinter.CTkImage(Image.open("seta-esquerda.png").resize((20, 20)))
+
+        botao5 = customtkinter.CTkButton(master=Caixa, image=setaE, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
+                                    fg_color="#EFB810",
+                                    hover_color="#AAAAAA",
+                                    command=setaesquerda)
+        botao5.place(x=20, y=500)
+
+
+
+
+
+        img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
+
+        Home = customtkinter.CTkButton(master=Caixa, image=img2, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                        fg_color="transparent",
+                                        hover_color="#CDCDCB")
+        Home.place(x=75, y=825)
+
+        img3 = customtkinter.CTkImage(Image.open("opcoes-removebg-preview.png").resize((20, 20)))
+
+        Opcoes = customtkinter.CTkButton(master=Caixa, image=img3, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                        fg_color="transparent",
+                                        hover_color="#CDCDCB",
+                                        command=opcoes
+                                    )
+        Opcoes.place(x=325, y=825)
+
+        img4 = customtkinter.CTkImage(Image.open("Cora.png").resize((20, 20)))
+
+        Favoritos = customtkinter.CTkButton(master=Caixa, image=img4, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                        fg_color="transparent",
+                                        hover_color="#CDCDCB",
+                                        command=favoritos)
+        Favoritos.place(x=200, y=825)
+
+        image_germany = Image.open("Principal.png").resize((400,400))
+        photo_germany = ImageTk.PhotoImage(image_germany)
+
+        label_germany = customtkinter.CTkLabel(master=Caixa2, image=photo_germany, width=300, height=300, text="")
+        label_germany.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+
+        main.mainloop()
+
+
+    else:
+        Erro.configure(text="Email ou senha incorretos")
+
+
+
+
+app = customtkinter.CTk()
+app.geometry("1280x1000")
+app.title('Login')
+
+
+img1 = ImageTk.PhotoImage(Image.open("aviaoo.jpg"))
+Plano1 = customtkinter.CTkLabel(master=app, image=img1)
+Plano1.pack()
+
+Caixa = customtkinter.CTkFrame(master=Plano1, width=320, height=360, corner_radius=6)
+Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+Plano2 = customtkinter.CTkLabel(master=Caixa, text="Faça login com sua conta", font=("Century Gothic", 20))
+Plano2.place(x=35, y=45)
+
+email = customtkinter.CTkEntry(master=Caixa, placeholder_text="Email", width=220)
+email.place(x=50, y=110)
+
+senha = customtkinter.CTkEntry(master=Caixa, placeholder_text="Senha", width=220, show="*")
+senha.place(x=50, y=165)
+
+Plano2 = customtkinter.CTkLabel(master=Caixa, text="Esqueceu a senha?", font=("Century Gothic", 12, "underline"))
+Plano2.place(x=155, y=195)
+
+Login = customtkinter.CTkButton(master=Caixa, width=220, text="Login", corner_radius=6, fg_color="#EFB810", text_color="black", hover_color='#a87b05', command=botao_login)
+Login.place(x=50, y=240)
+
+Erro = customtkinter.CTkLabel(master=Caixa, text="", font=("Century Gothic", 12), text_color="red")
+Erro.place(x=85, y=280)
+
+img2 = customtkinter.CTkImage(Image.open("face.jpg").resize((20, 20)))
+img3 = customtkinter.CTkImage(Image.open("google.jpg").resize((20, 20)))
+
+google = customtkinter.CTkButton(master=Caixa, image=img3, text="Google", width=100, height=20, corner_radius=6, compound="left", text_color="black",
+                            fg_color="white",
+                            hover_color="#AAAAAA")
+google.place(x=50, y=320)
+
+facebook = customtkinter.CTkButton(master=Caixa, image=img2, text="Facebook", width=100, height=20, corner_radius=6, compound="left", text_color="black",
+                                fg_color="white",
+                                hover_color="#AAAAAA")
+facebook.place(x=170, y=320)
+
+app.mainloop()
