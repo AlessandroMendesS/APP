@@ -1,0 +1,24 @@
+import tkinter
+import customtkinter
+from PIL import ImageTk, Image
+
+
+Selecao = customtkinter.CTk()
+Selecao.geometry("500x800")
+Selecao.title("Infos")
+
+img1 = ImageTk.PhotoImage(Image.open("aviaoo.jpg"))
+Plano1 = customtkinter.CTkLabel(master=Selecao image=img1)
+Plano1.pack()
+
+Caixa = customtkinter.CTkFrame(master=Selecao, width=450, height=900, corner_radius=50, fg_color="white")
+Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+Imagem_Alemanha = Image.open("germany.png")
+Imagem_Alemanha = Imagem_Alemanha.resize((300, 300))
+Imagem_Alemanha = ImageTk.PhotoImage(Imagem_Alemanha)
+
+Caixa_Alemanha = customtkinter.CTkLabel(master=Caixa, image=Imagem_Alemanha, width=100, height=100, text="")
+Caixa_Alemanha.place(x=330,y=0)
+
+Selecao.mainloop()
