@@ -12,7 +12,9 @@ O principal problema que ele resolve e a descrição de como deveria funcionar: 
 03. Favoritar países: Os usuários devem poder favoritar países para acessá-los facilmente mais tarde.
 ### Protótipos:
 Estes protótipos a seguir são antes das mais recentes atualizações do projeto, assim sendo, apenas um rascunho/ideia que tinhamos para o aplicativo
-
+![image](https://github.com/AlessandroMendesS/APP/assets/165946341/0d32316a-920d-48ba-b180-54dfe1f1389b)
+![image](https://github.com/AlessandroMendesS/APP/assets/165946341/c78756a9-8d04-4d4b-b2a7-2bc8833f9b2b)
+(Todos os protótipos foram feitos no bloco de notas e também diretamente do Pyhton)
 # Fluxograma: 
 https://app.diagrams.net/#G1jApOKUy6_TN1zTTpVZcHGWJ8y6McpV_9#%7B%22pageId%22%3A%22oMlwRrjJkWFmrOkWhqLc%22%7D
 
