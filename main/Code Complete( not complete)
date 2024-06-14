@@ -4,7 +4,7 @@ from PIL import ImageTk, Image
 
 
 customtkinter.set_default_color_theme("green")
-customtkinter.set_appearance_mode("dark")
+customtkinter.set_appearance_mode("ligth")
 
 #Somente adms tem acesso ...
 usuarios = {
@@ -199,7 +199,6 @@ def botao_login():
 
 
             Main3.mainloop()
-
 
 
         def opcoes():
@@ -418,7 +417,100 @@ def botao_login():
 
             Favoritos.mainloop()
 
+        def escolher():
+            main.destroy()
+            Selecao = customtkinter.CTk()
+            Selecao.geometry("500x800")
+            Selecao.title("Infos")
 
+            img1 = ImageTk.PhotoImage(Image.open("fundo.jpg"))
+            Plano1 = customtkinter.CTkLabel(master=Selecao, image=img1)
+            Plano1.pack()
+
+            Caixa = customtkinter.CTkFrame(master=Selecao, width=450, height=900, corner_radius=50, fg_color="white")
+            Caixa.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+            Imagem_Alemanha = Image.open("germany.png")
+            Imagem_Alemanha = Imagem_Alemanha.resize((500, 500))
+            Imagem_Alemanha = ImageTk.PhotoImage(Imagem_Alemanha)
+
+            Caixa_Alemanha = customtkinter.CTkLabel(master=Caixa, image=Imagem_Alemanha, width=100, height=100, text="")
+            Caixa_Alemanha.place(x=140,y=-115)
+
+            setaE = customtkinter.CTkImage(Image.open("seta-esquerda.png").resize((20, 20)))
+
+            botao7 = customtkinter.CTkButton(master=Caixa, image=setaE, text="", width=15, height=60, corner_radius=180, compound="left", text_color="black",
+                                                    fg_color="#EFB810",
+                                                    hover_color='#a87b05')
+            botao7.place(x=20, y=30)
+
+            descrição = customtkinter.CTkButton(master=Caixa,width=200, height=45, corner_radius=180, text='Descrição', fg_color='#EFB810', hover_color='#a87b05', text_color='black', font=("Century Gothic", 20))
+            descrição.place(x=130, y= 550)
+
+            descricao_pais_alemanha = customtkinter.CTkLabel(master=Caixa, text="Uma mistura fascinante de história, cultura e paisagens deslumbrantes.", text_color="black", font= ('Century Gothic', 12))
+            descricao_pais_alemanha.place(x=15,y=610)
+            descricao_pais_alemanha1 = customtkinter.CTkLabel(master=Caixa, text=" De Berlim a Munique, explore castelos, museus de classe mundial e ", text_color="black", font= ('Century Gothic', 12))
+            descricao_pais_alemanha1.place(x=20,y=630)
+            descricao_pais_alemanha2 = customtkinter.CTkLabel(master=Caixa, text="desfrute da rica gastronomia alemã.", text_color="black", font= ('Century Gothic', 12))
+            descricao_pais_alemanha2.place(x=110,y=650)
+            descricao_pais_alemanha3 = customtkinter.CTkLabel(master=Caixa, text="Uma viagem inesquecível espera por você!", text_color="black", font= ('Century Gothic', 18))
+            descricao_pais_alemanha3.place(x=35,y=700)
+
+
+            Imagem_sifrao = Image.open("cifrao.png")
+            Imagem_sifrao = Imagem_sifrao.resize((50, 50))
+            Imagem_sifrao = ImageTk.PhotoImage(Imagem_sifrao)
+
+            Caixa_sifraoImagem_sifrao = customtkinter.CTkLabel(master=Caixa, image=Imagem_sifrao, width=100, height=100, text="")
+            Caixa_sifraoImagem_sifrao.place(x=-10,y=250)
+
+            valor = customtkinter.CTkButton(master=Caixa,width=45, height=45, corner_radius=180, text='=  1 € - 5,73 R$', fg_color='transparent', hover_color='#a87b05', text_color='black', font=("Century Gothic", 21))
+            valor.place(x=63, y=275)
+
+            Imagem_PIB = Image.open("pib.png")
+            Imagem_PIB = Imagem_PIB.resize((35, 35))
+            Imagem_PIB = ImageTk.PhotoImage(Imagem_PIB)
+
+            Caixa_PIB = customtkinter.CTkLabel(master=Caixa, image=Imagem_PIB, width=30, height=30, text='')
+            Caixa_PIB.place(x=20,y=220)
+
+            valor1 = customtkinter.CTkButton(master=Caixa,width=45, height=45, corner_radius=180, text='= 3,948 Tri. de dólares', fg_color='transparent', hover_color='#a87b05', text_color='black', font=("Century Gothic", 13))
+            valor1.place(x=53, y=220)
+
+
+
+
+
+
+
+
+
+            img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
+
+            Home = customtkinter.CTkButton(master=Caixa, image=img2, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                    fg_color="transparent",
+                                                    hover_color="#CDCDCB")
+            Home.place(x=75, y=825)
+
+            img3 = customtkinter.CTkImage(Image.open("opcoes-removebg-preview.png").resize((20, 20)))
+
+            Opcoes = customtkinter.CTkButton(master=Caixa, image=img3, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                    fg_color="transparent",
+                                                    hover_color="#CDCDCB"  
+                                                )
+            Opcoes.place(x=325, y=825)
+
+            img4 = customtkinter.CTkImage(Image.open("Cora.png").resize((20, 20)))
+
+            Favoritos = customtkinter.CTkButton(master=Caixa, image=img4, text="", width=50, height=20, corner_radius=100, compound="left", text_color="black",
+                                                    fg_color="transparent",
+                                                    hover_color="#CDCDCB")
+                                                    
+            Favoritos.place(x=200, y=825)
+
+
+
+            Selecao.mainloop()
 
 
         main = customtkinter.CTk()
@@ -478,7 +570,8 @@ def botao_login():
 
 
         botao6 = customtkinter.CTkButton(master=Caixa, text="Escolher", width=45, height=45, corner_radius=180, text_color="black", fg_color="#EFB810", hover_color="#a87b05", 
-                                        font=('Century Gothic', 20))
+                                        font=('Century Gothic', 20),
+                                        command=escolher)
         botao6.place(x=170, y= 650)
 
 
@@ -515,6 +608,8 @@ def botao_login():
 
         main.mainloop()
 
+            
+
 
     else:
         Erro.configure(text="Email ou senha incorretos")
@@ -527,7 +622,7 @@ app.geometry("1280x1000")
 app.title('Login')
 
 
-img1 = ImageTk.PhotoImage(Image.open("aviaoo.jpg"))
+img1 = ImageTk.PhotoImage(Image.open("fundo.jpg"))
 Plano1 = customtkinter.CTkLabel(master=app, image=img1)
 Plano1.pack()
 
@@ -573,6 +668,14 @@ CaixaQR.place(relx=0.95, rely=0.95, anchor=tkinter.SE)
 
 QRCode = customtkinter.CTkLabel(master=CaixaQR, image=img4, text="")
 QRCode.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+imgLogo = ImageTk.PhotoImage(Image.open("LOGO.png").resize((200, 200)))
+
+CaixaLogo = customtkinter.CTkFrame(master=app, width=500, height=220, corner_radius=10, fg_color="transparent")
+CaixaLogo.place(x=720, y=50)
+
+Logo = customtkinter.CTkLabel(master=CaixaLogo, image=imgLogo, text="")
+Logo.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
 
 app.mainloop()
