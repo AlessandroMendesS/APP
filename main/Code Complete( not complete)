@@ -4,6 +4,7 @@ from PIL import ImageTk, Image
 
 
 customtkinter.set_default_color_theme("green")
+customtkinter.set_appearance_mode("dark")
 
 #Somente adms tem acesso ...
 usuarios = {
@@ -19,7 +20,7 @@ def botao_login():
     
     if email_input in usuarios and usuarios[email_input] == senha_input:
         app.destroy()
-        customtkinter.set_appearance_mode("ligth")
+        
 
         def setadireita():
             main.destroy()
@@ -560,5 +561,15 @@ facebook = customtkinter.CTkButton(master=Caixa, image=img2, text="Facebook", wi
                                 fg_color="white",
                                 hover_color="#AAAAAA")
 facebook.place(x=170, y=320)
+
+
+img4 = ImageTk.PhotoImage(Image.open("qr.png").resize((200, 200)))
+
+CaixaQR = customtkinter.CTkFrame(master=app, width=220, height=220, corner_radius=10, fg_color="white")
+CaixaQR.place(relx=0.95, rely=0.95, anchor=tkinter.SE)
+
+QRCode = customtkinter.CTkLabel(master=CaixaQR, image=img4, text="")
+QRCode.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
 
 app.mainloop()
