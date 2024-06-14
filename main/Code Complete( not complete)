@@ -10,8 +10,8 @@ customtkinter.set_appearance_mode("dark")
 usuarios = {
     "LucianoTrevisan": "Posturado",
     "Alessandro": "Sigma",
-    "HenrigueAlpha":"Alpha",
-    "JoaoBobao":"betaaaa"
+    "HenriqueAlpha":"Alpha",
+    "Jao":"Trembo"
 }
 
 def botao_login():
@@ -462,7 +462,7 @@ def botao_login():
 
         botao4 = customtkinter.CTkButton(master=Caixa, image=setaD, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
                                     fg_color="#EFB810",
-                                    hover_color="#AAAAAA",
+                                    hover_color="#a87b05",
                                     command=setadireita
                                     )
         botao4.place(x=370, y=500)
@@ -472,12 +472,14 @@ def botao_login():
 
         botao5 = customtkinter.CTkButton(master=Caixa, image=setaE, text="", width=15, height=35, corner_radius=180, compound="left", text_color="black",
                                     fg_color="#EFB810",
-                                    hover_color="#AAAAAA",
+                                    hover_color="#a87b05",
                                     command=setaesquerda)
         botao5.place(x=20, y=500)
 
 
-
+        botao6 = customtkinter.CTkButton(master=Caixa, text="Escolher", width=45, height=45, corner_radius=180, text_color="black", fg_color="#EFB810", hover_color="#a87b05", 
+                                        font=('Century Gothic', 20))
+        botao6.place(x=170, y= 650)
 
 
         img2 = customtkinter.CTkImage(Image.open("home-removebg-preview.png").resize((20, 20)))
